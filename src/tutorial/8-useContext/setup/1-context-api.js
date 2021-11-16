@@ -3,13 +3,21 @@ import { data } from '../../../data';
 // more components
 // fix - context api, redux (for more complex cases)
 
+
+
 const ContextAPI = () => {
+
+  
   const [people, setPeople] = useState(data);
+
+
   const removePerson = (id) => {
     setPeople((people) => {
       return people.filter((person) => person.id !== id);
     });
   };
+
+
   return (
     <>
       <h3>prop drilling</h3>
@@ -17,6 +25,8 @@ const ContextAPI = () => {
     </>
   );
 };
+
+
 
 const List = ({ people, removePerson }) => {
   return (
@@ -34,6 +44,8 @@ const List = ({ people, removePerson }) => {
   );
 };
 
+
+
 const SinglePerson = ({ id, name, removePerson }) => {
   return (
     <div className='item'>
@@ -42,5 +54,7 @@ const SinglePerson = ({ id, name, removePerson }) => {
     </div>
   );
 };
+
+
 
 export default ContextAPI;

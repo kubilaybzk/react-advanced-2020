@@ -18,8 +18,8 @@ const Example = () => {
 
   useEffect(() => {
     getProducts()
-  }, [url])
-  console.log(products)
+  }, [])
+  
   return (
     <div>
       <h2>{loading ? 'loading...' : 'data'}</h2>
